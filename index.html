@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedy Recovery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-container">
+        <h1 class="logo">Speedy Recovery</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="quote.html" class="quote-btn">Get a Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- Centered Text -->
+            <div class="text-content">
+                <h1>Reliable & Fast Vehicle Recovery</h1>
+                <p>Get professional roadside assistance anywhere, anytime.</p>
+                <div class="get-quote-container">
+                    <button class="get-quote-btn">GET A QUOTE</button>
+                </div>
+                
+                <div class="search-bar-container">
+    <div class="search-dropdown">
+        <input type="text" id="searchInput" placeholder="Search..." onclick="toggleDropdown()">
+        <div class="dropdown-content" id="dropdown">
+            <p onclick="selectService('Towing')">Towing</p>
+            <p onclick="selectService('Jump Start')">Jump Start</p>
+            <p onclick="selectService('Flat Tire')">Flat Tire</p>
+            <p onclick="selectService('Battery Replacement')">Battery Replacement</p>
+        </div>
+    </div>
+    <button>Search</button>
+</div>     
+                
+                <div class="image-slider">
+                    <button class="slider-btn prev" onclick="scrollLeft()">❮</button>
+                    <div class="image-container">
+                        <img src="assets/image1.jpg" alt="Image 1">
+                        <img src="assets/image2.jpg" alt="Image 2">
+                        <img src="assets/image3.jpg" alt="Image 3">
+                        <img src="assets/image3.jpg" alt="Image 3">
+                        <img src="assets/image3.jpg" alt="Image 3">
+                        <img src="assets/image3.jpg" alt="Image 3">
+                        <img src="assets/image3.jpg" alt="Image 3">
+                        <img src="assets/image3.jpg" alt="Image 3">
+                        <img src="assets/image3.jpg" alt="Image 3">
+                    </div>
+                    <button class="slider-btn next" onclick="scrollRight()">❯</button>
+                </div>
+                
+    </section>
+    
+    </section>
+
+    
+
+<section id="home" class="home">
+    <div class="home-container">
+        <!-- Left Side: Home Intro -->
+        <div class="home-intro">
+            <h1>Fast & Reliable Vehicle Recovery</h1>
+            <p>Stranded on the road? We’ve got you covered! At Speedy Recovery, we specialize in rapid, professional, and stress-free vehicle recovery services. Day or night, rain or shine – our expert team is just a call away, ensuring you’re back on the road safely. Experience seamless roadside assistance with a team that values your time and peace of mind.</p>
+        </div>
+        
+        <!-- Right Side: Booking Form -->
+        <div class="booking-form">
+            <h2 class="quote-box">Get a Quote</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+        
+                <label for="vehicle">Vehicle Type:</label>
+                <input type="text" id="vehicle" name="vehicle" required>
+        
+                <label for="service">Service Needed (Starting from £60):</label>
+                <select id="service" name="service" required>
+                    <option value="towing">Towing – from £60</option>
+                    <option value="jumpstart">Jump Start – from £60</option>
+                    <option value="tirechange">Tire Change – from £60</option>
+                    <option value="fuel">Fuel Delivery – from £60</option>
+                    <option value="lockout">Lockout – from £60</option>
+                </select>        
+                <label for="location">City/Area:</label>
+                <input type="text" id="location" name="location" required>
+        
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+        
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+        
+                <button type="submit" class="btn">Request Quote</button>
+            </form>
+        </div>
+        
+</section>
+
+    <!-- Image after Services -->
+    <h2 class="services-heading">OUR SERVICES</h2>
+    <section id="services" class="services">
+        <div class="services-container">
+            <div class="services-row">
+                <div class="service-item">
+                    <img src="assets/recovery1.jpg" alt="Service 1" class="service-img">
+                    <h3>Emergency Towing</h3>
+                    <p>Need immediate towing assistance? We’re here 24/7 for emergency towing services to get your vehicle to safety.</p>
+                    <a href="tel:+441234567890" class="call-btn">Call Us Now</a>
+                </div>
+                <div class="service-item">
+                    <img src="assets/recovery2.jpg" alt="Service 1" class="service-img">
+                    <h3>Jump Start</h3>
+                    <p>Battery issues? Our jump start service will get you back on the road quickly and safely.</p>
+                    <a href="tel:+441234567890" class="call-btn">Call Us Now</a>
+                </div>
+                <div class="service-item">
+                    <img src="assets/recovery3.jpg" alt="Service 1" class="service-img">
+                    <h3>Tire Change</h3>
+                    <p>Flat tire? Our experts will replace it swiftly, so you're not stranded for long.</p>
+                    <a href="tel:+441234567890" class="call-btn">Call Us Now</a>
+                </div>
+            </div>
+            <div class="services-row">
+                <div class="service-item">
+                    <img src="assets/recovery4.jpg" alt="Service 1" class="service-img">
+                    <h3>Fuel Delivery</h3>
+                    <p>Ran out of fuel? We deliver fuel directly to your location, so you can get back on your way.</p>
+                    <a href="tel:+441234567890" class="call-btn">Call Us Now</a>
+                </div>
+                <div class="service-item">
+                    <img src="assets/recovery5.jpg" alt="Service 1" class="service-img">
+                    <h3>Vehicle Lockout</h3>
+                    <p>Locked out of your vehicle? Our team can unlock your car quickly and without damage.</p>
+                    <a href="tel:+441234567890" class="call-btn">Call Us Now</a>
+                </div>
+                <div class="service-item">
+                    <img src="assets/recovery6.jpg" alt="Service 1" class="service-img">
+                    <h3>Accident Recovery</h3>
+                    <p>Locked out of your vehicle? Our team can unlock your car quickly and without damage.</p>
+                    <a href="tel:+441234567890" class="call-btn">Call Us Now</a>
+                </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>INFORMATION</h3>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Sell Content</a></li>
+                        <li><a href="#">Brand Guidelines</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Search Trends</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">License Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Copyright Information</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Cookies Settings</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column">
+                    <h3>SOCIAL MEDIA</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="assets/x.png" alt="X (Twitter)"></a>
+                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                    <p>Get exclusive assets sent straight to your inbox</p>
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>Copyright © 2025 Speedy Recovery. All rights reserved.</p>
+                <button class="language-btn">English ▼</button>
+            </div>
+        </footer>
+       <!-- WhatsApp Button -->
+<a href="https://wa.me/your-number" class="floating-btn whatsapp-btn" target="_blank">
+    <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+</a>
+
+<!-- Emergency Call Button -->
+<div class="emergency-call">
+    <span class="emergency-text">Emergency Call</span>
+    <a href="tel:+your-number" class="floating-btn call-btn">
+        <img src="assets/call-icon.png" alt="Call">
+    </a>
+</div>
+
+
+        
+

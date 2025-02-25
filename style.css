@@ -1,0 +1,1056 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding:50;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styling */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 100px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6b00;
+}
+
+/* "Get a Quote" Button */
+.quote-btn {
+    background-color: #ff6b00;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.quote-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 75vh;
+    background: url('assets/r1.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Dark Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 2000px;
+    z-index: 2;
+    margin-top: 200px; /* Adjust the value as needed */
+}
+
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* CTA Button */
+.cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+
+.about {
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    color: rgb(248, 3, 3);
+    text-align: center;
+    padding: 100px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-content {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 50px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 1.2s ease-in-out;
+}
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 3px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Our Services Section */
+.services-heading {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    color: #ff4d4d;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 00px; /* Increased space below */
+    padding-top: 50px; /* Moves it downward */
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.services-heading::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: #ff4d4d;
+    margin: 10px auto 0;
+    border-radius: 3px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Light Glow Effect */
+.services-heading:hover {
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.8);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adjust services section background for contrast */
+.services {
+    background: linear-gradient(to right, #f8f8f8, #ffffff);
+    padding: 80px 20px; /* Increased padding to create space */
+    color: #fffdfd;
+    text-align: center;
+}
+
+
+.services-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.service-item {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.5);
+}
+
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-img {
+    transform: scale(1.05);
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffa500;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+    opacity: 0.9;
+}
+
+.call-btn {
+    display: inline-block;
+    background: #ffa500;
+    color: #111;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.call-btn:hover {
+    background: #ff8c00;
+    box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.8);
+}
+
+/* Footer Container */
+.footer {
+    background-color: #1a1a1a; /* Darker background for a modern look */
+    color: #fff; /* White text color */
+    padding: 50px 20px; /* Increased padding for a spacious footer */
+    font-family: 'Roboto', sans-serif; /* Modern font family */
+}
+
+/* Footer Container with Flexbox */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px; /* Adds consistent space between sections */
+}
+
+/* Footer Section Styles */
+.footer-section {
+    flex: 1; /* Equal width for each section */
+    min-width: 200px; /* Ensures sections stay readable on small screens */
+}
+
+/* Section Title */
+.footer-section h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #00bcd4; /* Stylish accent color */
+    position: relative;
+}
+
+/* Underline Effect on Section Titles */
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #00bcd4;
+}
+
+/* Footer Links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for List Items */
+.footer-section ul li:hover {
+    color: #00bcd4; /* Accent color on hover */
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Footer Contact Info */
+.footer-section p {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Social Icons Styling */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%); /* Grayscale icons by default */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects for Social Icons */
+.social-icons a:hover img {
+    filter: grayscale(0); /* Color the icon on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    background-color: #141414; /* Darker shade for the bottom section */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Footer Bottom Text */
+.footer-bottom p {
+    margin: 0;
+    color: #bbb; /* Light grey text for the bottom */
+}
+
+/* Responsive Design: Stacking Footer Sections on Smaller Screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+/* Home Section Styles */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #00bcd4, #008c9e);
+    color: white;
+    height: 80vh;
+    text-align: center;
+}
+
+/* Container to hold both sections */
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 300px;
+}
+
+/* Left Side: Home Intro */
+.home-intro {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    animation: fadeInLeft 1s ease-out;
+    border-right: 2px solid rgba(255, 255, 255, 0.2); /* Add vertical border */
+}
+
+/* Fade In Animation for Home Intro */
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Home Intro Title */
+.home-intro h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Home Intro Paragraph */
+.home-intro p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Right Side: Booking Form */
+.booking-form {
+    flex: 1;
+    max-width: 50%;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInRight 1s ease-out;
+}
+
+/* Fade In Animation for Form */
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Form Heading */
+.booking-form {
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px auto;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.quote-box {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffa500;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: #fff;
+    margin: 5px 0;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.btn {
+    background: #ffa500;
+    color: #111;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #ff8c00;
+    transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+    .booking-form {
+        width: 90%;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background: #111;
+    color: white;
+    padding: 50px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column {
+    width: 20%;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+    background: #ff9800;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.subscribe-btn:hover {
+    background: #e68900;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/* Language Button */
+.language-btn {
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.language-btn:hover {
+    background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .home-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .home-intro, .booking-form {
+        max-width: 100%;
+    }
+    
+    .booking-form {
+        padding: 20px;
+    }
+}
+/* Call Button Style */
+.call-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #e7bf09;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.call-btn:hover {
+    background-color: #0097a7;
+}
+
+.call-btn:active {
+    background-color: #e9911e;
+}
+/* Style for "Always on Time" */
+.tagline {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0af816;
+    margin: 10px 0;
+}
+
+/* Orange box around "Get a Quote" */
+.quote-btn-header {
+    background: orange;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quote-btn-header:hover {
+    background: darkorange;
+}
+/* Orange box for "Get a Quote" */
+.quote-box {
+    background-color: orange;
+    color: white;
+    padding: 12px 25px;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.quote-box:hover {
+    background-color: darkorange;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Ripple Effect on Click */
+.quote-box:active {
+    transform: scale(0.95);
+}
+.service-img {
+    width: 300px; /* Adjust width to look like an icon */
+    height: 300px; /* Keep it square */
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: none; /* Remove shadow if not needed */
+    display: inline-block; /* Keep it inline if used in nav or buttons */
+    object-fit: cover; /* Ensures it crops properly */
+}
+/* Search Bar Styling */
+/* Ensure search bar and buttons are properly aligned */
+/* Ensure sections do not overlap */
+/* Center search bar and add spacing */
+.search-bar-container {
+    width: 70%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Added */
+}
+
+.search-dropdown {
+    position: relative;
+    flex-grow: 1;
+}
+
+.search-dropdown input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensures dropdown appears just below input */
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown-content p {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.dropdown-content p:hover {
+    background: #f1f1f1;
+}
+
+button {
+    background: #ff5a00;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e04800;
+}
+
+
+/* Increase space below "Get a Quote" */
+/* Ensure main container does not overlap */
+.get-quote-container {
+    width: 40%; /* Adjust width as needed */
+    max-width: 400px; /* Prevent it from getting too large */
+    margin: 0 auto; /* Center it */
+    padding: 20px; /* Reduce padding */
+    text-align: center;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 10px;
+}
+.get-quote-container button {
+    background: #ff5a00;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.get-quote-container button:hover {
+    background: #e04800;
+}
+
+
+.get-quote-container button:hover {
+    background: #e04800; /* Darker shade on hover */
+}
+
+
+/* Move image slider further down */
+.image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: 50px auto; /* Increased margin */
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Image container settings */
+.image-container {
+    display: flex;
+    gap: 20px; /* Space between images */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Proper image styling */
+.image-container img {
+    width: 200px;
+    height: 120px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+/* Style the dropdown to make it more visible */
+.booking-form select {
+    width: 100%; /* Make it full width */
+    padding: 10px; /* Increase padding for better clickability */
+    font-size: 1.1rem; /* Increase font size */
+    border: 2px solid #ddd; /* Add a subtle border */
+    border-radius: 5px; /* Round the edges */
+    background-color: white; /* Make sure background is visible */
+    color: black; /* Ensure text is readable */
+    cursor: pointer; /* Show pointer when hovering */
+}
+
+/* Ensure dropdown options are clearly visible */
+.booking-form select option {
+    font-size: 1rem; /* Adjust font size */
+    padding: 10px; /* Add space between options */
+}
+
+/* Fix any potential z-index issues */
+.booking-form {
+    position: relative;
+    z-index: 10;
+}
+/* General Header Styling */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark background for contrast */
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #00bcd4; /* Stylish blue accent */
+}
+
+/* Quote Button */
+.quote-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.quote-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
+/* Floating Buttons - Common Styles */
+.floating-btn {
+    position: fixed;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    bottom: 90px; /* Adjust spacing from the call button */
+    background-color: #25d366;
+}
+
+/* Emergency Call Button */
+.call-btn {
+    bottom: 20px;
+    background-color: #ff3b30;
+}
+
+/* Button Icons */
+.floating-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Hover Effect */
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
