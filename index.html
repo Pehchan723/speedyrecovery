@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Speedy Recovery</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
 <body>
     <header class="header-container">
         <h1 class="logo">Speedy Recovery</h1>
@@ -79,7 +82,8 @@
         <!-- Right Side: Booking Form -->
         <div class="booking-form">
             <h2 class="quote-box">Get a Quote</h2>
-            <form action="#" method="post">
+            <form action="thank-you.html" method="get">
+
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
         
@@ -108,7 +112,11 @@
         
                 <button type="submit" class="btn">Request Quote</button>
             </form>
+            <div id="someID" style="display: none;">Content</div>
         </div>
+        <script src="script.js" defer></script>
+    </body>
+    </html>
         
 </section>
 
@@ -157,6 +165,43 @@
                 </div>
         </section>
 
+                <!-- Why Choose Us Section -->
+                <section class="why-choose-us">
+                    <h2 class="center-heading"> Why Choose Us? </h2>
+                    <p class="subtitle">We provide exceptional service with a dedicated team, available 24/7 for your needs.</p>
+                    <div class="features-container">
+                        <div class="feature-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>⚡ Fast & Reliable Service</h3>
+                            <p>Quick response and efficient recovery for your needs.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-users"></i>
+                            <h3>👨‍💼 Expert Team</h3>
+                            <p>Skilled professionals with years of experience.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-headset"></i>
+                            <h3>📞 24/7 Support</h3>
+                            <p>Always available when you need us.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-wallet"></i>
+                            <h3>💰 Affordable Pricing</h3>
+                            <p>Quality service at competitive rates.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-car"></i>
+                            <h3>🚗 Roadside Assistance</h3>
+                            <p>Help available for breakdowns, flat tires, and more.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-thumbs-up"></i>
+                            <h3>👍 Customer Satisfaction</h3>
+                            <p>Your happiness is our priority.</p>
+                        </div>
+                    </div>
+                </section>
         <footer>
             <div class="footer-container">
                 <div class="footer-column">

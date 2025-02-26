@@ -3,9 +3,8 @@ document.getElementById("searchInput").addEventListener("focus", function() {
 });
 
 document.addEventListener("click", function(event) {
-    if (!event.target.closest(".search-box")) {
-        document.getElementById("searchDropdown").style.display = "none";
-    }
+    if (!event.target.closest(".search-box"))
+        document.getElementById("someID").style.display = "none";
 });
 
 function selectService(service) {
@@ -36,3 +35,38 @@ document.addEventListener("click", function(event) {
         dropdown.style.display = "none";
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".booking-form form");
+
+    if (!form) {
+        console.error("Booking form not found!");
+        return; // Stops the function if no form exists
+    }
+
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault(); // Prevents page reload
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch("your-backend-endpoint", {
+                method: "POST",
+                body: formData
+            });
+
+            if (!response.ok) {
+                document.querySelector("form").addEventListener("submit", function(event) {
+                    alert("Form submitted successfully!"); // Temporary success message
+                });
+                            }
+
+                            return response.text(); // Get response as plain text instead of JSON
+                            console.log("Server Response:", result);
+            alert("Form submitted successfully!");
+        } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred while submitting the form.");
+        }
+    });
+});
+
