@@ -40,33 +40,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!form) {
         console.error("Booking form not found!");
-        return; // Stops the function if no form exists
+        return;
     }
 
     form.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Prevents page reload
+        event.preventDefault();
 
         const formData = new FormData(form);
+        const data = new URLSearchParams();
+
+        for (const pair of formData.entries()) {
+            data.append(pair[0], pair[1]);
+        }
 
         try {
-            const response = await fetch("your-backend-endpoint", {
+            const response = await fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
                 method: "POST",
-                body: formData
+                body: data
             });
 
-            if (!response.ok) {
-                document.querySelector("form").addEventListener("submit", function(event) {
-                    alert("Form submitted successfully!"); // Temporary success message
-                });
-                            }
+            const result = await response.text();
+            console.log("Google Sheet Response:", result);
 
-                            return response.text(); // Get response as plain text instead of JSON
-                            console.log("Server Response:", result);
-            alert("Form submitted successfully!");
+            if (result.toLowerCase().includes("success")) {
+                alert("Form submitted successfully!");
+                form.reset(); // Optional: reset form after success
+            } else {
+                alert("Form submission failed. Try again.");
+            }
         } catch (error) {
             console.error("Error:", error);
             alert("An error occurred while submitting the form.");
         }
     });
 });
+
 
