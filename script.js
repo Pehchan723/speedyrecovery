@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbykwzSeJ5ck8QF-IwkzAmf8pGop5xx2zUM3F9_CKyjZ9y7tw9hUY2k-Of4nv-5UCAId/exec", {
                 method: "POST",
                 body: data
             });
